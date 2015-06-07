@@ -1,7 +1,4 @@
-class WelcomeController < ApplicationController
-	def say
-		
-	end
+class PageController < ApplicationController
 	def index
 
 	end
