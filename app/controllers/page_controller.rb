@@ -3,7 +3,7 @@ class PageController < ApplicationController
 
 	end
 	def about
-
+		@aboutwhat=params[:what]
 	end
 	def mission
 		
