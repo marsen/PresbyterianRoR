@@ -1,2 +1,2 @@
 #
-rails g model news id:integer key:string title:string content:string create:timestamp modify:timestamp
+rails g model news key:string title:string content:string create:timestamp modify:timestamp
