@@ -1,1 +1,8 @@
 <h4>INDEX PAGE</h4>
+<ul>
+<% @news.each do |news| %>
+<li>
+  <%=news.title%>
+</li>
+<% end %>
+</ul>
