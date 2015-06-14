@@ -1,125 +1,56 @@
 <html>
     <title>台灣基督長老教會埔墘教會</title>
+    <link rel="stylesheet" type="text/css" href="/bootstrap-3.3.4-dist/css/bootstrap.css">
 </head>
 <body>
 <h1>台灣基督長老教會埔墘教會</h1>
-<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
-    </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
-      <ul class="nav navbar-nav">
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Services</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </div>
-    <!-- /.navbar-collapse -->
-  </div>
-  <!-- /.container -->
-</nav>
+<div class="container">
 
-                <ul class="wsite-menu-default">
-                    <li id="js-mainmenu" class="wsite-menu-item-wrap active">
-                        <a href="/" class="wsite-menu-item">
-                            首頁
-                        </a>
-
-                    </li>
-                    <li  class="wsite-menu-item-wrap">
-                        <a href="/mission" data-membership-required="0" class="wsite-menu-item">
-                            使命目標
-                        </a>
-
-                    </li>
-                    <li class="wsite-menu-item-wrap">
-                        <a href="/about/members" data-membership-required="0" class="wsite-menu-item">
-                            關於我們
-                        </a>
-                        <div class="wsite-menu-wrap" style="display:none">
-                            <ul class="wsite-menu">
-                                <li class="wsite-menu-subitem-wrap">
-                                    <a href="/about/members" class="wsite-menu-subitem">
-                                        <span class="wsite-menu-title">
-                                            同工介紹
-                                        </span>
-                                    </a>
-
-                                </li>
-                                <li class="wsite-menu-subitem-wrap">
-                                    <a href="/about/groups" class="wsite-menu-subitem">
-                                        <span class="wsite-menu-title">
-                                            團契小組
-                                        </span>
-                                    </a>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
-                    <li class="wsite-menu-item-wrap">
-                        <a href="/witness" data-membership-required="0" class="wsite-menu-item">
-                            見証分享
-                        </a>
-
-                    </li>
-                    <li class="wsite-menu-item-wrap">
-                        <a href="/schedule" data-membership-required="0" class="wsite-menu-item">
-                            聚會時間
-                        </a>
-
-                    </li>
-                    <li class="wsite-menu-item-wrap">
-                        <a href="/about/location" data-membership-required="0" class="wsite-menu-item">
-                            地圖位置
-                        </a>
-                        <div class="wsite-menu-wrap" style="display:none">
-                            <ul class="wsite-menu">
-                                <li class="wsite-menu-subitem-wrap">
-                                    <a href="/about/location" class="wsite-menu-subitem">
-                                        <span class="wsite-menu-title">
-                                            教會位置
-                                        </span>
-                                    </a>
-
-                                </li>
-                                <li class="wsite-menu-subitem-wrap">
-                                    <a href="/about/floorplan" class="wsite-menu-subitem">
-                                        <span class="wsite-menu-title">
-                                            教會配置圖
-                                        </span>
-                                    </a>
-
-                                </li>
-                                <li class="wsite-menu-subitem-wrap">
-                                    <a href="/contact" class="wsite-menu-subitem">
-                                        <span class="wsite-menu-title">
-                                            聯絡我們
-                                        </span>
-                                    </a>
-
-                                </li>
-                            </ul>
-                        </div>
-                    </li>
+      <!-- Static navbar -->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/">首頁</a></li>
+              <li><a href="/mission">使命目標</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                    關於我們 
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/about/members">同工介紹</a></li>
+                  <li><a href="/about/groups">團契小組</a></li>
                 </ul>
-
-                <%= yield %>
+              </li>
+              <li><a href="/witness">見証分享</a> </li>
+              <li><a href="/schedule">聚會時間</a> </li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
+                    地圖位置 
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="/about/location">教會位置</a></li>
+                  <li><a href="/about/floorplan">教會配置圖</a></li>
+                  <li><a href="/contact">聯絡我們</a></li>
+                </ul>
+              </li>              
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div><!--/.container-fluid -->
+      </nav>
+    </div>
+        <div class="contanier">
+            <%= yield %>
+        </div>                
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 </html>
