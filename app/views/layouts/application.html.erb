@@ -13,10 +13,27 @@
     <!-- Bootstrap core CSS -->
     <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/bootstrap/css/carousel.css" rel="stylesheet">
+    <style>
+          .content{
+              min-height:100%;
+              overflow:auto;
+              padding-bottom: 60px;
+          }
+          .footer {
+              position: relative;
+              margin-top: -60px;
+              bottom: 0;
+              clear: both;
+              width: 100%;
+              /* Set the fixed height of the footer here */
+              height: 60px;
+              background-color: #f5f5f5;
+          }
+    </style>
   </head>
 <body>
 <h1>台灣基督長老教會埔墘教會</h1>
-    <div class="container">
+    <div class="content container">
         <nav class="navbar navbar-default">
             <div class="container-fluid">
           <div class="navbar-header">
@@ -60,6 +77,11 @@
             <%= yield %>
         </div> 
     </div>
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Place sticky footer content here.</p>
+      </div>
+    </footer>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="/bootstrap/js/bootstrap.min.js"></script>
 </body>
