@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
-root "page#index"
-get "/mission" => "page#mission"
-get "/about/:what" => "page#about"
+root :to=>"page#index"
+resources :news
+# get "/mission" => "page#mission"
+# get "/about/:what" => "page#about"
 #get "/about/members" => "page#aboutMember"
 #get "/about/groups" => "page#/aboutGroups"
 #get "/about/location" => "page#aboutLocation"
 #get "/about/floorplan" => "page#aboutFloorplan"
-get "/witness" => "page#witness"
-get "/schedule" => "page#schedule"
-get "/contact" => "page#contact"
-get "welcome/say_hello" => "welcome#say"
+# get "/witness" => "page#witness"
+# get "/schedule" => "page#schedule"
+# get "/contact" => "page#contact"
+# get "welcome/say_hello" => "welcome#say"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
