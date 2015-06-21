@@ -1,6 +1,10 @@
 <% @news_list.each do |news| %>
     <li>
-      <%= news.title %>
+      <%= news.title %>|
+      <%= news.content %>|
+      <%= news.created_at.strftime('%Y%m%d') %>|
+      <%= news.updated_at.strftime('%Y%m%d') %>|
+      <%= news.key %>|
       <%= link_to "Show", news_path(news) %>
       <%= link_to 'Edit', edit_news_path(news) %>
       <%= button_to 'Delete', news_path(news), :method => :delete, :data => { :confirm => "Are you sure?" } %>
