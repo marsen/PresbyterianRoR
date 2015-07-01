@@ -1,1 +1,5 @@
-show
+show News
+<%= @news.title %>
+<%= simple_format(@news.content) %>
+
+<p><%= link_to 'Back to index', :controller => 'news', :action => 'index' %></p>

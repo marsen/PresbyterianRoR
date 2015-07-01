@@ -1,1 +1,13 @@
-edit
+edit News
+<%= form_for @news, :url => { :controller => 'news', :action => 'update' } do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "title" ,:for=>"news_title" %>
+      <%= f.text_field :title ,:class=>"form-control" ,:id=>"news_title" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :content, "content", :for=>"news_content" %>
+      <%= f.text_area :content ,:class=>"form-control" ,:id=>"news_content" %>
+    </div>
+
+    <%= f.submit "Update", :class=>"btn btn-default" %>
+<% end %>
