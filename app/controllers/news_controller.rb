@@ -6,6 +6,10 @@ class NewsController < ApplicationController
 		@news = News.new
 	end
 	def create
+		@news = News.new(news_params)
+		@news.save
+
+		redirect_to :action => :index
 
 	end
 
@@ -14,5 +18,11 @@ class NewsController < ApplicationController
 	end
 	def edit
 
+	end
+
+	private
+
+	def news_params
+		params.require(:news).permit(:title, :content)
 	end
 end
