@@ -1,0 +1,15 @@
+<% @witnesses.each do |witness| %>
+    <li>
+      <%= witness.title %>|
+      <%= witness.content %>|
+      <%= witness.created_at.strftime('%Y%m%d') %>|
+      <%= witness.updated_at.strftime('%Y%m%d') %>|
+      <%= witness.key %>|
+      <%= link_to "Show", witness_path(witness) %>
+      <%= link_to 'Edit', edit_witness_path(witness) %>
+      <%= button_to 'Delete', witness_path(witness), :method => :delete, :data => { :confirm => "Are you sure?" } %>
+    </li>
+<% end %>
+</ul>
+
+<%= link_to 'Add Witness', new_witness_path %>

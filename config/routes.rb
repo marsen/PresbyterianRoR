@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 root :to=>"page#index"
 resources :news
+resources :witness
 
  get "/mission" => "page#mission"
  get "/about/:what" => "page#about"
@@ -8,7 +9,7 @@ resources :news
 #get "/about/groups" => "page#/aboutGroups"
 #get "/about/location" => "page#aboutLocation"
 #get "/about/floorplan" => "page#aboutFloorplan"
- get "/witness" => "page#witness"
+#get "/witness" => "page#witness"
  get "/schedule" => "page#schedule"
  get "/contact" => "page#contact"
  get "welcome/say_hello" => "welcome#say"
