@@ -4,10 +4,11 @@
   <% @witnesses.each do |witness| %>
       <div class="col-lg-4 col-sm-6 col-xs-12">
         <a href="<%=witness_path(witness)%>">
+          <b><%= witness.is_active %></b>
           <b><%= witness.title %></b>
+          <%= link_to '修改', edit_witness_path(witness), :class => "btn btn-sm btn-warning" %>
+          <%= link_to '刪除', witness_path(witness), :class => "btn btn-sm btn-danger", :method => :delete, :data => { :confirm => "確定刪除?" } %>
           <img src="<%= witness.photo %>" class="thumbnail img-responsive">
-          <%= link_to '修改', edit_witness_path(witness), :class => "btn btn-warning" %>
-          <%= link_to '刪除', witness_path(witness), :class => "btn btn-danger", :method => :delete, :data => { :confirm => "確定刪除?" } %>
        </a>
       </div>
   <% end %>
