@@ -1,15 +1,14 @@
-<% @witnesses.each do |witness| %>
-    <li>
-      <%= witness.title %>|
-      <%= witness.content %>|
-      <%= witness.created_at.strftime('%Y%m%d') %>|
-      <%= witness.updated_at.strftime('%Y%m%d') %>|
-      <%= witness.key %>|
-      <%= link_to "Show", witness_path(witness) %>
-      <%= link_to 'Edit', edit_witness_path(witness) %>
-      <%= button_to 'Delete', witness_path(witness), :method => :delete, :data => { :confirm => "Are you sure?" } %>
-    </li>
-<% end %>
-</ul>
-
-<%= link_to 'Add Witness', new_witness_path %>
+<%= link_to '+新的見証', new_witness_path %>
+<hr/>
+<div class="row">
+  <% @witnesses.each do |witness| %>
+      <div class="col-lg-4 col-sm-6 col-xs-12">
+        <a href="<%=witness_path(witness)%>">
+          <b><%= witness.title %></b>
+          <img src="<%= witness.photo %>" class="thumbnail img-responsive">
+          <%= link_to '修改', edit_witness_path(witness), :class => "btn btn-warning" %>
+          <%= link_to '刪除', witness_path(witness), :class => "btn btn-danger", :method => :delete, :data => { :confirm => "確定刪除?" } %>
+       </a>
+      </div>
+  <% end %>
+</div>

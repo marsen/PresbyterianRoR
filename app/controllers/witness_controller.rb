@@ -28,6 +28,6 @@ class WitnessController < ApplicationController
     private
 
     def witness_params
-      params.require(:witness).permit(:title, :content)
+      params.require(:witness).permit(:title, :content,:photo)
     end
 end
