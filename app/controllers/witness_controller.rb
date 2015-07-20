@@ -24,7 +24,11 @@ class WitnessController < ApplicationController
     def edit
       @witness = Witness.find(params[:id])
     end
-
+    def destroy
+      @witness = Witness.find(params[:id])
+      @witness.update(is_active: false)
+      redirect_to :action => :index
+    end
     private
 
     def witness_params
