@@ -1,6 +1,8 @@
 class WitnessController < ApplicationController
     def index
-      @witnesses = Witness.all
+      #
+      @witnesses = Witness.where(is_active: true).order(:created_at).reverse_order.take(10)
+      @is_admin = false
     end
     def new
       @witness = Witness.new
