@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+#paperclip
+gem "paperclip", "~> 4.3"
 # add bootstrap
 gem 'bootstrap-sass' , '~> 3.3.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
