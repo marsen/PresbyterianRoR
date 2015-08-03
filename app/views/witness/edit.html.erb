@@ -1,11 +1,13 @@
-edit Witness
+<iframe id="iframeUpload" style="display: block;width:100%; height:768px;" ></iframe>
 <%= form_for @witness, :url => { :controller => 'witness', :action => 'update' } do |f| %>
     <div class="form-group">
       <%= f.label :title, "title" ,:for=>"witness_title" %>
       <%= f.text_field :title ,:class=>"form-control" ,:id=>"witness_title" %>
     </div>
+
     <div class="form-group">
       <%= f.file_field :photo , :name=>"photo",:id=>"witness_photo"  %>
+      <input type="button" value="上傳" id="uploadImg" />
     </div>
     <div class="form-group">
       <%= f.label :content, "content", :for=>"witness_content" %>
@@ -13,3 +15,6 @@ edit Witness
     </div>
     <%= f.submit "Update", :class=>"btn btn-default" %>
 <% end %>
+<script type="text/javascript" charset="utf-8">
+
+</script>
