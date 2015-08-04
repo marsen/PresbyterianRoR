@@ -14,9 +14,9 @@ class WitnessController < ApplicationController
     end
     def update
       @witness = Witness.find(params[:id])
-      photo = save_photo()
+      #photo = save_photo()
       @witness.update(witness_params)
-      @witness.update(photo:photo)
+      #@witness.update(photo:photo)
       redirect_to :action => :show, :id => @witness
     end
     def show

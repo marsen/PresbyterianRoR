@@ -1,4 +1,4 @@
-<iframe id="iframeUpload" style="display: block;width:100%; height:768px;" ></iframe>
+<iframe id="iframeUpload" style="display: none;" ></iframe>
 <%= form_for @witness, :url => { :controller => 'witness', :action => 'update' } do |f| %>
     <div class="form-group">
       <%= f.label :title, "title" ,:for=>"witness_title" %>
@@ -6,8 +6,9 @@
     </div>
 
     <div class="form-group">
-      <%= f.file_field :photo , :name=>"photo",:id=>"witness_photo"  %>
+      <%= f.text_field :photo , :name=>"photo",:id=>"witness_photo"  %>
       <input type="button" value="上傳" id="uploadImg" />
+      <img id="preview" src="" alt="" style="display:none;width:240px;height: auto;"/>
     </div>
     <div class="form-group">
       <%= f.label :content, "content", :for=>"witness_content" %>

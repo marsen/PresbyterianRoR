@@ -15,6 +15,7 @@ $(function () {
             codeIfm += '<input type="file" id="file" name="photo" value="" onchange="document.forms[0].submit();return false;" />';
             codeIfm += '</form>';
             $('#iframeUpload').contents().find('html').html(codeIfm).find('#file').click();
+
         });
     }
 });
