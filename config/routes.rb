@@ -2,8 +2,18 @@ Rails.application.routes.draw do
 root :to=>"page#index"
 resources :news
 resources :witness
+resources :about do
+    collection do
+      get :floorplan
+      get :members
+      get :groups
+      get :location
+    end
+end
 
+ #get "/about/floorplan" => "about#floorplan"
  get "/mission" => "page#mission"
+<<<<<<< Updated upstream
  get "/about/:what" => "page#about"
 #get "/about/members" => "page#aboutMember"
 #get "/about/groups" => "page#/aboutGroups"
@@ -13,6 +23,18 @@ resources :witness
  get "/schedule" => "page#schedule"
  get "/contact" => "page#contact"
  get "welcome/say_hello" => "welcome#say"
+=======
+ #get "/about/:what" => "page#about"
+ #get "/about/members" => "page#aboutMember"
+ #get "/about/groups" => "page#/aboutGroups"
+ #get "/about/location" => "page#aboutLocation"
+
+ get "/schedule" => "page#schedule"
+ get "/contact" => "page#contact"
+ get "welcome/say_hello" => "welcome#say"
+ #
+ post "uploader/image"=> "uploader#image"
+>>>>>>> Stashed changes
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
