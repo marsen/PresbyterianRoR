@@ -12,7 +12,8 @@ resources :about do
 end
 resources :admin do
   collection do
-    get :login
+    post :login
+    post :logout
   end
 end
  #get "/about/floorplan" => "about#floorplan"
