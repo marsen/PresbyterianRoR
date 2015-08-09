@@ -10,6 +10,11 @@ resources :about do
       get :location
     end
 end
+resources :admin do
+  collection do
+    get :login
+  end
+end
  #get "/about/floorplan" => "about#floorplan"
  get "/mission" => "page#mission"
 
