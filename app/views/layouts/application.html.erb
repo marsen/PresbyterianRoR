@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
-
+    <%= csrf_meta_tag %>
     <title>Navbar Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
@@ -87,6 +87,6 @@
       </div>
     </footer>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-    <%= csrf_meta_tag %>
+    <%= yield(:footer_includes) %>
 </body>
 </html>

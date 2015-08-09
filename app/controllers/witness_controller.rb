@@ -15,7 +15,6 @@ class WitnessController < ApplicationController
     def update
       @witness = Witness.find(params[:id])
       @witness.update(witness_params)
-
       redirect_to :action => :show, :id => @witness
     end
     def show
@@ -30,7 +29,6 @@ class WitnessController < ApplicationController
       redirect_to :action => :index
     end
     private
-
     def witness_params
       params.require(:witness).permit(:title, :content,:photo)
     end
