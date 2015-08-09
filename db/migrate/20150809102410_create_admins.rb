@@ -4,7 +4,7 @@ class CreateAdmins < ActiveRecord::Migration
       t.string :account
       t.string :password
 
-      t.timestamps 
+      t.timestamps
     end
   end
 end
