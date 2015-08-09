@@ -1,7 +1,7 @@
-show Witness
-<%= @witness.title %>
-<%= image_tag @witness.photo %>
-<hr/>
-<%= simple_format(@witness.content) %>
+
+<h4><%= @witness.title %></h4>
+<img width="240" src="<%= @witness.photo %>" alt="<%= @witness.title %>"/>
+<article><%= simple_format(@witness.content) %></article>
+
 
 <p><%= link_to 'Back to index', :controller => 'witness', :action => 'index' %></p>

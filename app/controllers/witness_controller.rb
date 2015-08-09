@@ -1,6 +1,8 @@
 class WitnessController < ApplicationController
     def index
-      @witnesses = Witness.all
+      #
+      @witnesses = Witness.where(is_active: true).order(:created_at).reverse_order.take(10)
+      @is_admin = true
     end
     def new
       @witness = Witness.new
@@ -30,6 +32,7 @@ class WitnessController < ApplicationController
     end
     private
     def witness_params
+
       params.require(:witness).permit(:title, :content,:photo)
     end
 end
