@@ -18,4 +18,7 @@ class PageController < ApplicationController
 	def contact
 
 	end
+	def ckeditor
+
+	end
 end

@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem 'paperclip'
+gem "ckeditor"
+
 #font-awesome
 gem "font-awesome-rails" , "~> 4.4.0.0"
 # add bootstrap

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount Ckeditor::Engine => '/ckeditor'
 root :to=>"page#index"
 resources :news
 resources :witness
@@ -23,6 +24,7 @@ end
  get "/schedule" => "page#schedule"
  get "/contact" => "page#contact"
  get "welcome/say_hello" => "welcome#say"
+ get '/ckeditor'=> 'page#ckeditor'
  #
  post "uploader/image"=> "uploader#image"
 

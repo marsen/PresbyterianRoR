@@ -11,4 +11,5 @@ class ApplicationController < ActionController::Base
     return true if value == true || value.to_s.strip =~ /^(true|yes|y|1)$/i
     return false
   end
+
 end

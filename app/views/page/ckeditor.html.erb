@@ -1,0 +1,14 @@
+CKEDITOR
+<textarea name="" id="" cols="30" rows="10"></textarea>
+<% content_for(:footer_includes) do %>
+    <%= javascript_include_tag 'ckeditor/ckeditor.js' %>
+
+<script type="text/javascript">$(document).ready(function() {
+    if ($('textarea').length > 0) {
+        var data = $('textarea');
+        $.each(data, function(i) {
+            CKEDITOR.replace(data[i].id);
+        });
+    }
+});</script>
+<% end %>
