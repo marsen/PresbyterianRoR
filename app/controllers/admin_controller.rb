@@ -10,6 +10,6 @@ class AdminController < ApplicationController
 	end
 	def logout
 		session[:is_admin] = false
-		redirect_to :action => :index
+		redirect_to request.referer
 	end
 end

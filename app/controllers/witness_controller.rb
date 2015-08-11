@@ -2,7 +2,7 @@ class WitnessController < ApplicationController
     def index
       #
       @witnesses = Witness.where(is_active: true).order(:created_at).reverse_order.take(10)
-      @is_admin = session[:is_admin]
+
     end
     def new
       @witness = Witness.new
