@@ -1,4 +1,7 @@
+<h3><i class="fa fa-plus-circle"></i>見証分享</h3>
+<% if @is_admin %>
 <%= link_to '+新的見証', new_witness_path %>
+<% end %>
 <hr/>
 <div class="row">
   <% @witnesses.each do |witness| %>
