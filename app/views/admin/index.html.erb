@@ -6,10 +6,8 @@ Admin Login Status: <%=@is_admin %>
     <% end %>
 <% else %>
     <%= form_tag('/admin/login', method: "post") do %>
-        <%= label_tag(:q, "Account:") %>
-        <%= text_field_tag(:q) %>
-        <%= label_tag(:q, "password:") %>
-        <%= text_field_tag(:q) , :name = 'password' %>
+        <%= label_tag( "password:") %>
+        <%= text_field_tag('password') %>
         <%= submit_tag("Login") %>
     <% end %>
 <% end%>
