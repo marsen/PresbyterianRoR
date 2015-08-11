@@ -12,8 +12,4 @@ class AdminController < ApplicationController
 		session[:is_admin] = false
 		redirect_to :action => :index
 	end
-	def to_bool(value)
-		return true if value == true || value.to_s.strip =~ /^(true|yes|y|1)$/i
-		return false
-	end
 end
