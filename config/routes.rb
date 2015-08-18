@@ -17,12 +17,13 @@ resources :admin do
     get :logout
   end
 end
+
  #get "/about/floorplan" => "about#floorplan"
  get "/mission" => "page#mission"
 
  get "/schedule" => "page#schedule"
  get "/contact" => "page#contact"
- get "welcome/say_hello" => "welcome#say"
+ #get "welcome/say_hello" => "welcome#say"
  #
  post "uploader/image"=> "uploader#image"
 
