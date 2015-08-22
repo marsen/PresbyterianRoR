@@ -20,7 +20,7 @@ end
 
  #get "/about/floorplan" => "about#floorplan"
  get "/mission" => "page#mission"
-
+ get "/qa" => "page#qa"
  get "/schedule" => "page#schedule"
  get "/contact" => "page#contact"
  #get "welcome/say_hello" => "welcome#say"
