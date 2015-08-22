@@ -15,7 +15,7 @@ class PageController < ApplicationController
 	def schedule
 
 	end
-	def contact
+	def qa
 
 	end
 end
