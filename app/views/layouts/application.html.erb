@@ -63,9 +63,9 @@
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li><a href="/">首頁</a></li>
-              <li id="tab-mission"><a href="/mission">使命目標</a></li>
-              <li class="dropdown">
+              <li class="tab-index"><a href="/">首頁</a></li>
+              <li class="tab-mission"><a href="/mission">使命目標</a></li>
+              <li class="dropdown tab-members tab-groups">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
                     關於我們 
                     <span class="caret"></span></a>
@@ -74,9 +74,9 @@
                   <li><a href="/about/groups">團契小組</a></li>
                 </ul>
               </li>
-              <li id="tab-witness"><a href="/witness">見証分享</a> </li>
-              <li><a href="/schedule">聚會時間</a> </li>
-              <li class="dropdown">
+              <li class="tab-witness"><a href="/witness">見証分享</a> </li>
+              <li class="tab-schedule"><a href="/schedule">聚會時間</a> </li>
+              <li class="dropdown tab-location tab-floorplan tab-qa">
                 <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">
                     地圖位置 
                     <span class="caret"></span></a>
@@ -105,8 +105,14 @@
     <script type="text/javascript">
       $(document).ready(function(){
         var url = window.location.href;
-        var tabName = url.split('/')[3];
-        $('#tab-' + tabName).addClass('active');
+        var lastIndex = url.split('/').length - 1 ;
+        var tabName = url.split('/')[lastIndex];
+        if ( tabName == "" ){
+            $('.tab-index').addClass('active');
+        }else{
+            $('.tab-' + tabName).addClass('active');
+        }
+
       });
     </script>
 </body>
