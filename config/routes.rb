@@ -17,7 +17,14 @@ resources :admin do
     get :logout
   end
 end
-
+resources :goal do
+  collection do
+    get :ministry
+    get :annual
+    get :next
+    get :midRange
+  end
+end
  #get "/about/floorplan" => "about#floorplan"
  get "/mission" => "page#mission"
  get "/qa" => "page#qa"
