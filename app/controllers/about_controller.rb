@@ -8,4 +8,7 @@ class AboutController < ApplicationController
   def location
 
   end
+  def history
+
+  end
 end

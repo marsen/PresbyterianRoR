@@ -8,6 +8,7 @@ resources :about do
       get :members
       get :groups
       get :location
+      get :history
     end
 end
 resources :admin do
