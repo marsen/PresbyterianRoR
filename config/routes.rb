@@ -9,6 +9,9 @@ resources :about do
       get :groups
       get :location
       get :history
+      get :pastor
+      get :secretary
+      get :officer
     end
 end
 resources :admin do
@@ -27,7 +30,7 @@ resources :goal do
   end
 end
  #get "/about/floorplan" => "about#floorplan"
- get "/mission" => "page#mission"
+ #get "/mission" => "page#mission"
  get "/qa" => "page#qa"
  get "/schedule" => "page#schedule"
  get "/contact" => "page#contact"
