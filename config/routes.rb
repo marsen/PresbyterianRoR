@@ -5,13 +5,28 @@ resources :witness
 resources :about do
     collection do
       get :floorplan
-      get :members
-      get :groups
       get :location
       get :history
-      get :pastor
-      get :secretary
-      get :officer
+      resources :members do
+        collection do        
+          get :pastor
+          get :secretary
+          get :officer
+        end
+      end
+      resources :groups do
+          collection do        
+            get :matins
+            get :elder
+            get :women
+            get :married          
+            get :youth
+            get :young
+            get :awana
+            get :choir
+            get :workship
+        end
+      end
     end
 end
 resources :admin do
