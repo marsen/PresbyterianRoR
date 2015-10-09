@@ -15,7 +15,10 @@ resources :about do
         end
       end
       resources :groups do
-          collection do        
+          collection do
+            get :sunday_workship
+            get :qt        
+            get :family
             get :matins
             get :elder
             get :women
