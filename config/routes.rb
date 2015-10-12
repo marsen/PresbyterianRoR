@@ -3,10 +3,18 @@ root :to=>"page#index"
 resources :news
 resources :witness
 resources :about do
-    collection do
-      get :floorplan
-      get :location
+    collection do      
       get :history
+      resources :location do
+        collection do 
+          
+          get :b1
+          get :floor1
+          get :floor2
+          get :floor4
+          get :floor5
+        end
+      end
       resources :members do
         collection do        
           get :pastor
