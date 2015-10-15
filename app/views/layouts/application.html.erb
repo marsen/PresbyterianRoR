@@ -125,11 +125,11 @@
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
               <li class="tab-index"><a href="/">首頁</a></li>
-              <li class="tab-mission"><a href="/goal">使命目標</a></li>
-              <li class="tab-members"><a href="/about/members/pastor">關於我們</a> </li>
+              <li class="tab-goal"><a href="/goal">使命目標</a></li>
+              <li class="tab-about"><a href="/about/members/pastor">關於我們</a> </li>
               <li class="tab-witness"><a href="/witness">見証分享</a> </li>
               <li class="tab-schedule"><a href="/schedule">聚會時間</a> </li>
-              <li class="tab-location"><a href="/about/location">地圖位置</a> </li>  
+              <li class="tab-location"><a href="/location">地圖位置</a> </li>  
             </ul>
           </div><!--/.nav-collapse -->
             </div><!--/.container-fluid -->
@@ -148,9 +148,7 @@
     <%= yield(:footer_includes) %>
     <script type="text/javascript">
       $(document).ready(function(){
-        var url = window.location.href;
-        var lastIndex = url.split('/').length - 1 ;
-        var tabName = url.split('/')[lastIndex];
+        var tabName = window.location.pathname.split('/')[1];
         if ( tabName == "" ){
             $('.tab-index').addClass('active');
         }else{
