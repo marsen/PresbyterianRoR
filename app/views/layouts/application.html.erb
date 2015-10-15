@@ -6,6 +6,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="/favicon.ico">
     <%= csrf_meta_tag %>
     <title>Navbar Template for Bootstrap</title>
@@ -48,6 +49,12 @@
     }
     .full{
       width:  100%;
+    }
+    /* For width 600px and larger: */
+    @media only screen and (min-width: 600px) {
+        footer { 
+            background-image: url('/images/footer/600.jpg'); 
+        }
     }
     </style>
 </head>
