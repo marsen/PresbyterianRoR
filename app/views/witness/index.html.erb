@@ -12,8 +12,8 @@
         <% if @is_admin %>
         <%= link_to '修改', edit_witness_path(witness), :class => "btn btn-sm btn-warning" %>
         <%= link_to '刪除', witness_path(witness), :class => "btn btn-sm btn-danger", :method => :delete, :data => { :confirm => "確定刪除?" } %>
-        <% end %>
         <b><%=witness.created_at.strftime("%Y-%m-%d")%></b>
+        <% end %>
         <a href="<%=witness_path(witness)%>">
 
           <img src="<%= witness.photo %>" class="thumbnail img-responsive">
