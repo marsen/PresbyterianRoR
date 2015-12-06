@@ -3,8 +3,9 @@
 <%= link_to '+新的見証', new_witness_path %>
 <% end %>
 <hr/>
-<div class="row">
-  <% @witnesses.each do |witness| %>
+<%if @witnesses.count() > 0 %>
+  <div class="row">
+    <% @witnesses.each do |witness| %>
       <div class="col-lg-4 col-sm-6 col-xs-12">
         <a href="<%=witness_path(witness)%>">
           <b><%= witness.title %></b>
@@ -15,9 +16,39 @@
         <b><%=witness.created_at.strftime("%Y-%m-%d")%></b>
         <% end %>
         <a href="<%=witness_path(witness)%>">
-
           <img src="<%= witness.photo %>" class="thumbnail img-responsive">
        </a>
       </div>
-  <% end %>
+  <% end %>  
 </div>
+<% else %>
+   <div>Empty</div>
+<% end %>  
+<hr />
+<nav>
+  <ul class="pagination">
+    <% if @currentPage > 1 %>
+      <li>
+        <a href="/witness?p=<%= @currentPage - 1 %>" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+    <% end %> 
+    <% (@currentPage-2..@currentPage+2).each do |i| %>
+      <%if 0 < i  && i < @totalPage + 1 %>
+        <% if i != @currentPage %>
+          <li><a href="/witness?p=<%= i %>"><%= i %></a></li>
+        <% else %>
+          <li class="active"><a><%= i %></a></li>
+        <% end %>
+      <% end %>      
+    <% end %>
+    <% if @currentPage < @totalPage %>
+      <li>
+        <a href="/witness?p=<%= @currentPage + 1 %>" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</nav>
